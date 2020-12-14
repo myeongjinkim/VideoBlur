@@ -1,0 +1,7 @@
+Executable : C:\Users\kiakd\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe
+arguments : 
+-C
+C:\Users\kiakd\Desktop\VideoBlur\VideoBlur\app\.cxx\cmake\debug\arm64-v8a
+media-lib
+jvmArgs : 
+

@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "C:\\Users\\kiakd\\Desktop\\version\\7. qqqq\\VideoBlur\\VideoBlur\\app\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\kiakd\\AppData\\Local\\Android\\Sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\kiakd\\Desktop\\version\\7. qqqq\\VideoBlur\\VideoBlur\\app\\.cxx\\cmake\\debug\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\kiakd\\AppData\\Local\\Android\\Sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\kiakd\\Desktop\\version\\7. qqqq\\VideoBlur\\VideoBlur\\app\\.cxx\\cmake\\debug\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "media-lib::@6890427a1f51a3e7e1df": {
+      "artifactName": "media-lib",
+      "abi": "x86",
+      "output": "C:\\Users\\kiakd\\Desktop\\version\\7. qqqq\\VideoBlur\\VideoBlur\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\libmedia-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

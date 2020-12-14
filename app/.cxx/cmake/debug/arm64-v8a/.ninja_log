@@ -1,0 +1,9 @@
+# ninja log v5
+8	205	629602833	CMakeFiles/media-lib.dir/src/main/cpp/vulkan_wrapper/vulkan_wrapper.cpp.o	bf8fe15aa42082ee
+17	210	629602833	CMakeFiles/media-lib.dir/src/main/cpp/CommonUtils.cpp.o	270fd6f133a4789b
+4	339	629602833	CMakeFiles/media-lib.dir/src/main/cpp/VideoRendererJNI.cpp.o	1dcc0924499d26f6
+6	363	629602833	CMakeFiles/media-lib.dir/src/main/cpp/VideoRendererContext.cpp.o	f7ee7e6ea0be9f4d
+1	385	629602833	CMakeFiles/media-lib.dir/src/main/cpp/VideoRenderer.cpp.o	d2469f6a7d18e5eb
+11	511	629602834	CMakeFiles/media-lib.dir/src/main/cpp/VKUtils.cpp.o	3c5cad6a6a48065d
+13	613	629602834	CMakeFiles/media-lib.dir/src/main/cpp/VKVideoRendererYUV420.cpp.o	ed0caa2beb42b1d6
+614	839	629602834	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libmedia-lib.so	625f9f7d3098c80d

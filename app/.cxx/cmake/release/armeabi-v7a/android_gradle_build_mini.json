@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "C:\\Users\\kiakd\\Desktop\\camera\\Camera2GLPreview\\app\\CMakeLists.txt",
+    "C:\\Users\\kiakd\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
+    "C:\\Users\\kiakd\\AppData\\Local\\Android\\Sdk\\ndk\\21.1.6352462\\build\\cmake\\platforms.cmake",
+    "C:\\Users\\kiakd\\Desktop\\camera\\Camera2GLPreview\\.cdep\\modules\\cdep-dependencies-config.cmake"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\kiakd\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\kiakd\\Desktop\\camera\\Camera2GLPreview\\app\\.cxx\\cmake\\release\\armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "C:\\Users\\kiakd\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"C:\\Users\\kiakd\\Desktop\\camera\\Camera2GLPreview\\app\\.cxx\\cmake\\release\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "media-lib-Release-armeabi-v7a": {
+      "artifactName": "media-lib",
+      "buildCommand": "C:\\Users\\kiakd\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\kiakd\\Desktop\\camera\\Camera2GLPreview\\app\\.cxx\\cmake\\release\\armeabi-v7a\" media-lib",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\kiakd\\Desktop\\camera\\Camera2GLPreview\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libmedia-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}
