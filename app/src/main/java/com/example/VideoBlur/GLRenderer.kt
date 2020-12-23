@@ -115,7 +115,7 @@ class GLRenderer(glSurfaceView: GLSurfaceView) : EFrameBufferObjectRenderer(), S
             }
         }
         glFilter!!.setup();
-        glFilter!!.setFrameSize(fbo!!.getWidth(), fbo!!.getHeight())
+        glFilter!!.setFrameSize(fbo!!.width, fbo.height)
 
         filterFramebufferObject!!.enable();
 
@@ -128,9 +128,9 @@ class GLRenderer(glSurfaceView: GLSurfaceView) : EFrameBufferObjectRenderer(), S
         glPreviewFilter!!.draw(texName, MVPMatrix, STMatrix, aspectRatio);
 
 
-        fbo!!.enable()
+        fbo.enable()
         GLES20.glClear(GL_COLOR_BUFFER_BIT);
-        glFilter!!.draw(filterFramebufferObject!!.getTexName(), fbo);
+        glFilter!!.draw(filterFramebufferObject!!.texName, fbo);
     }
 
     fun setExoPlayer(exoPlayer: SimpleExoPlayer) {
@@ -148,9 +148,7 @@ class GLRenderer(glSurfaceView: GLSurfaceView) : EFrameBufferObjectRenderer(), S
         if (glFilter != null) {
             glFilter!!.release()
         }
-        if (surfaceTexture != null) {
-            surfaceTexture.release()
-        }
+        surfaceTexture.release()
     }
 
 
