@@ -7,7 +7,7 @@ class GLBoxBlurFilter : GLFilter(VERTEX_SHADER, FRAGMENT_SHADER) {
     var texelHeightOffset = 0.003f
     var blurSize = 0f
 
-    public override fun onDraw() {
+    override fun onDraw() {
         GLES20.glUniform1f(getHandle("texelWidthOffset"), texelWidthOffset)
         GLES20.glUniform1f(getHandle("texelHeightOffset"), texelHeightOffset)
         GLES20.glUniform1f(getHandle("blurSize"), blurSize)

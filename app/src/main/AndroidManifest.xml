@@ -18,6 +18,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.VideoBlur.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +28,7 @@
         </activity>
         <activity
             android:name=".VideoActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.VideoBlur.NoActionBar"
             android:exported="true"
             android:configChanges="orientation|screenSize|layoutDirection">
