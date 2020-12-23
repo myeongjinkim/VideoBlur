@@ -1,8 +1,10 @@
-package com.example.VideoBlur
+package com.example.videoblur
 
 import android.net.Uri
 import android.os.Bundle
+import android.view.SurfaceView
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +20,7 @@ import androidx.compose.ui.platform.AmbientContext
 import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.viewinterop.AndroidViewBinding
-import com.example.VideoBlur.databinding.PlayerBinding
+import com.example.videoblur.databinding.PlayerBinding
 import com.google.android.exoplayer2.ui.PlayerView
 
 
@@ -36,7 +38,6 @@ class VideoActivity : AppCompatActivity(){
         setContent {
             MyApp() {
                 PlayerSurface(source)
-
             }
 
         }
@@ -57,15 +58,12 @@ class VideoActivity : AppCompatActivity(){
         playerControl.setPlayerRelease()
     }
 
-
-
 }
 
 @Composable
 fun PlayerSurface(source:Uri?){
     val context = AmbientContext.current
     playerControl.prepare(source)
-
     Column(
             modifier = Modifier.fillMaxSize().background(color = Color.White),
             verticalArrangement = Arrangement.SpaceEvenly,
@@ -73,36 +71,32 @@ fun PlayerSurface(source:Uri?){
     ) {
 
 
-
+        lateinit var myFrameLayout:FrameLayout
         AndroidViewBinding(PlayerBinding::inflate) {
-            myPlayerView = playerView
-            if (myPlayerView.getParent() != null) {
-                (myPlayerView.getParent() as ViewGroup).removeView(myPlayerView) // <- fix
+            myFrameLayout = frameLayout
+        }
+        myPlayerView = myFrameLayout.findViewById<PlayerView>(R.id.player_view)
+        myFrameLayout.addView(playerControl)
+        playerControl.setPlayer(myPlayerView)
+        myPlayerView.bringToFront()
+
+        myPlayerView.findViewById<SeekBar>(R.id.exo_blur).setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+                // TODO Auto-generated method stub
             }
 
-        }
-        playerControl.setPlayer(myPlayerView)
-        AndroidView(
-                viewBlock = { myPlayerView},
-                modifier = Modifier.background(color = Color.Black)){
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+                // TODO Auto-generated method stub
+            }
 
-            myPlayerView.findViewById<SeekBar>(R.id.exo_blur).setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    // TODO Auto-generated method stub
-                }
+            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                // TODO Auto-generated method stub
+                myPlayerView.findViewById<TextView>(R.id.exo_blur_text).setText("$progress")
+                playerControl.setBlurStrength(progress)
+                //glPlayerView.setBlur(progress)
 
-                override fun onStartTrackingTouch(seekBar: SeekBar) {
-                    // TODO Auto-generated method stub
-                }
-
-                override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                    // TODO Auto-generated method stub
-                    myPlayerView.findViewById<TextView>(R.id.exo_blur_text).setText("$progress")
-                    //glPlayerView.setBlur(progress)
-
-                }
-            })
-        }
+            }
+        })
 
     }
 }

@@ -1,4 +1,4 @@
-package com.example.VideoBlur
+package com.example.videoblur.ui
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

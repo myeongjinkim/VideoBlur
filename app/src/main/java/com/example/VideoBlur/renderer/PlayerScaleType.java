@@ -1,4 +1,4 @@
-package com.daasuu.epf;
+package com.example.videoblur.renderer;
 
 /**
  * Created by sudamasayuki on 2017/05/16.

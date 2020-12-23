@@ -1,4 +1,4 @@
-package com.example.VideoBlur
+package com.example.videoblur.ui
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

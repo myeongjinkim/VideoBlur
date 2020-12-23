@@ -1,6 +1,8 @@
-package com.example.videoblur.renderer;
+package com.example.videoblur.filter;
 
 import android.opengl.GLES20;
+
+import com.example.videoblur.filter.GLFilter;
 
 /**
  * Created by sudamasayuki on 2017/05/18.
@@ -57,7 +59,7 @@ public class GLBoxBlurFilter extends GLFilter {
 
     private float texelWidthOffset = 0.003f;
     private float texelHeightOffset = 0.003f;
-    private float blurSize = 1.0f;
+    private float blurSize = 0f;
 
 
     public GLBoxBlurFilter() {

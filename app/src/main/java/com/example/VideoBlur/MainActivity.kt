@@ -1,4 +1,4 @@
-package com.example.VideoBlur
+package com.example.videoblur
 
 
 import android.Manifest
@@ -22,6 +22,7 @@ import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.app.ActivityCompat.*
 import androidx.core.content.ContextCompat
+import com.example.videoblur.ui.VideoBlurTheme
 
 private val PermissionsCode = 1001
 private val VIDEOFILE_REQUEST = 101
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setPermission()
         setContent {
-            MyApp{
+            MyApp(){
                 CreateButton("동영상 불러오기")
             }
         }
@@ -78,7 +79,6 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun MyApp(content: @Composable () -> Unit) {
-    content()
     VideoBlurTheme {
         // A surface container using the 'background' color from the theme
         Surface() {
@@ -93,8 +93,8 @@ fun MyApp(content: @Composable () -> Unit) {
 fun CreateButton(name: String) {
     val context = AmbientContext.current
     Column(modifier = Modifier.fillMaxSize().background(color = Color.White),
-            verticalArrangement = Arrangement.SpaceEvenly,
-            horizontalAlignment = Alignment.CenterHorizontally) {
+        verticalArrangement = Arrangement.SpaceEvenly,
+        horizontalAlignment = Alignment.CenterHorizontally) {
         Button(onClick = { /*TODO*/
             val intent: Intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.setType("video/*")
@@ -104,8 +104,8 @@ fun CreateButton(name: String) {
 
         ) {
             Text(
-                    text = "$name!",
-                    style = MaterialTheme.typography.h6.copy(Color.White)
+                text = "$name!",
+                style = MaterialTheme.typography.h6.copy(Color.White)
             )
         }
     }

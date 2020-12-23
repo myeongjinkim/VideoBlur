@@ -1,4 +1,4 @@
-package com.daasuu.epf.chooser;
+package com.example.videoblur.renderer;
 
 import android.opengl.GLSurfaceView;
 import android.os.Build;

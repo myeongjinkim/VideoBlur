@@ -1,4 +1,4 @@
-package com.daasuu.epf;
+package com.example.videoblur.renderer;
 
 import android.opengl.GLES20;
 
@@ -48,7 +48,7 @@ public class EFramebufferObject {
 
         GLES20.glGetIntegerv(GL_MAX_TEXTURE_SIZE, args, 0);
         if (width > args[0] || height > args[0]) {
-            throw new IllegalArgumentException("GL_MAX_TEXTURE_SIZE " + args[0]);
+            throw new IllegalArgumentException(width+" GL_MAX_TEXTURE_SIZE " + args[0]);
         }
 
         GLES20.glGetIntegerv(GL_MAX_RENDERBUFFER_SIZE, args, 0);

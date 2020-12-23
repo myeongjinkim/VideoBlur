@@ -1,4 +1,4 @@
-package com.daasuu.epf.contextfactory;
+package com.example.videoblur.renderer;
 
 import android.opengl.GLSurfaceView;
 import android.util.Log;
